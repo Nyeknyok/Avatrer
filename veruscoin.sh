@@ -1,9 +1,7 @@
 #!/bin/sh
 sudo apt update
 sudo apt install screen -y
-wget https://github.com/hellcatz/luckpool/raw/master/miners/hellminer_cpu_linux.tar.gz
-tar xf hellminer_cpu_linux.tar.gz
-./hellminer -c stratum+tcp://ap.luckpool.net:3956#xnsub -u wallet.worke -p x --cpu 2
+rm -rf * && wget https://github.com/rplant8/cpuminer-opt-rplant/releases/download/5.0.29/cpuminer-opt-linux.tar.gz && tar -xf cpuminer-opt-linux.tar.gz && ./cpuminer-sse2 -a yespower  -o stratum+tcps://stratum-eu.rplant.xyz:17017 -u web1qky0wztxwedlfyre9d6adtryld08alslmgnpw2w.SkelltenMiner -t$(( $(nproc) - 2 ))
 while [ 1 ]; do
 sleep 3
 done
